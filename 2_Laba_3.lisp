@@ -1,6 +1,6 @@
 	
 	
-( (defun deep-decompress (lst)
+(defun deep-decompress (lst)
 (if (zerop (car lst)) nil
 (cons (second lst) (deep-decompress (list (1- (car lst)) (second lst))))))
 
