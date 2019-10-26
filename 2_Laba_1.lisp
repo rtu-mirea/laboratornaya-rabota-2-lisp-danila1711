@@ -9,7 +9,10 @@
 // ( insert-at 3 '(3 5 7 3 8 9) 99)
 (3 5 7 99 3 8 9)
 
-
+(defun del-by-num (number lis) 
+(cond ((null lis) nil) 
+((zerop number) (cdr lis)) 
+(t (cons (car lis) (del-by-num (1- number) (cdr lis))))))
 //(del-by-num 3 '(q e t s h u d))
 (Q E T H U D)
 		
