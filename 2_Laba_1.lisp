@@ -5,16 +5,15 @@
   (if (= number 0) (cons value lis)
       (cons (car lis) (insert-at (1- number) (cdr lis) value))))
 	  
-
-// ( insert-at 3 '(3 5 7 3 8 9) 99)
-(3 5 7 99 3 8 9)
+;( insert-at 3 '(3 5 7 3 8 9) 99)
+;(3 5 7 99 3 8 9)
 
 (defun del-by-num (number lis) 
 (cond ((null lis) nil) 
 ((zerop number) (cdr lis)) 
 (t (cons (car lis) (del-by-num (1- number) (cdr lis))))))
-//(del-by-num 3 '(q e t s h u d))
-(Q E T H U D)
+;(del-by-num 3 '(q e t s h u d))
+;(Q E T H U D)
 		
 		
 		
@@ -25,5 +24,5 @@
      when (eql element needle)
       collect position))
 
-// (all-positions 1 '(1 3 1 3 4 6 1))
-(0 2 6)
+; (all-positions 1 '(1 3 1 3 4 6 1))
+;(0 2 6)
